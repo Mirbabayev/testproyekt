@@ -1,0 +1,205 @@
+by Mirbabayev - Luxury Perfume E-commerce Full Front-end Task
+
+Build a fully functional front-end for a luxury perfume e-commerce website called "by Mirbabayev". Use React, TypeScript, Tailwind CSS, Framer Motion, React Router, and Lucide React icons. The design should be modern, minimalist, and inspired by Le Labo (lelabofragrances.com). The default language should be Azerbaijani (AZ), with options to switch to Russian (RU) and English (EN). I will handle the back-end myself, so use mock data and prepare the front-end to connect to a future API. Include filtering, search, admin panel, customer reviews, promo codes, and all necessary features for a complete e-commerce site. Ensure that selecting different volumes (e.g., 30ml, 50ml, 100ml) of a perfume dynamically updates its price. Follow the project structure and instructions below.
+
+Project Structure:
+src/
+├── components/          # Reusable UI components
+│   ├── Navbar.tsx      # Navigation bar component
+│   ├── ProductCard.tsx # Product card component
+│   ├── FilterBar.tsx   # Filter sidebar component
+│   ├── SearchBar.tsx   # Search input component
+│   ├── LanguageSwitcher.tsx # Language selection component
+│   ├── Footer.tsx      # Footer component
+│   └── ReviewCard.tsx  # Customer review component
+├── pages/              # Page components
+│   ├── Home.tsx        # Homepage with hero section
+│   ├── Shop.tsx        # Product listing page with filters and search
+│   ├── ProductDetail.tsx # Individual product page
+│   ├── Story.tsx       # About us/company story page
+│   ├── Cart.tsx        # Shopping cart page
+│   ├── Admin.tsx       # Admin panel page
+│   ├── Login.tsx       # Mock login page
+│   ├── OrderHistory.tsx # Mock order history page
+│   └── NotFound.tsx    # 404 page
+├── data/               # Static data and mock content
+│   ├── products.ts     # Product catalog data
+│   ├── translations.ts # Language translations (AZ, RU, EN)
+│   └── reviews.ts      # Mock customer reviews
+├── types/              # TypeScript type definitions
+│   └── index.ts        # Shared type definitions
+├── context/            # React Context for state management
+│   ├── CartContext.tsx # Cart state management
+│   ├── AdminContext.tsx # Admin state management
+│   ├── LanguageContext.tsx # Language state management
+│   ├── UserContext.tsx # Mock user state management
+│   └── WishlistContext.tsx # Wishlist state management
+├── App.tsx             # Root application component
+├── main.tsx            # Application entry point
+└── index.css           # Global styles and Tailwind imports
+
+General Requirements:
+- Use React, TypeScript, Tailwind CSS, Framer Motion, React Router, and Lucide React icons.
+- Make the site responsive for all devices (mobile, tablet, desktop).
+- Add smooth animations with Framer Motion (fade-ins, slide-ins, hover effects).
+- Use mock data for 5+ perfume products in src/data/products.ts based on the Product type below.
+- Implement a local shopping cart, admin system, and mock user system (no back-end needed yet).
+- Follow a minimalist design: white background, black/gray text, black accents.
+- Use Cormorant Garamond for headings, Inter for body text.
+- Set default language to Azerbaijani (AZ) with options to switch to Russian (RU) and English (EN).
+
+Product Type Definition (src/types/index.ts):
+export interface Product {
+  id: string;
+  brand: string;
+  name: { az: string; ru: string; en: string };
+  gender: "men" | "women" | "unisex";
+  description: { az: string; ru: string; en: string };
+  shortDescription: { az: string; ru: string; en: string };
+  group: "Floral" | "Woody" | "Fresh" | "Oriental" | "Other";
+  notes: {
+    top: { az: string; ru: string; en: string };
+    heart: { az: string; ru: string; en: string };
+    base: { az: string; ru: string; en: string };
+  };
+  variants: { volume: number; price: number; stock: number }[]; // Multiple volume options with prices
+  image: string;
+  releaseYear?: number;
+  rating?: number; // Average rating (1-5)
+}
+
+Specific Instructions:
+1. Language System
+   - Create LanguageContext.tsx in src/context/ to manage language state (default: "az").
+   - Create LanguageSwitcher.tsx in src/components/ with a dropdown for "AZ", "RU", "EN".
+   - Add LanguageSwitcher to Navbar.tsx.
+   - Create src/data/translations.ts with translations for all UI text (e.g., "Shop", "Add to Cart") in AZ, RU, EN:
+     export const translations = {
+       az: { home: "Ana Səhifə", shop: "Mağaza", story: "Hekayəmiz", cart: "Səbət", admin: "Admin", login: "Daxil ol", orders: "Sifarişlər" },
+       ru: { home: "Главная", shop: "Магазин", story: "Наша история", cart: "Корзина", admin: "Админ", login: "Войти", orders: "Заказы" },
+       en: { home: "Home", shop: "Shop", story: "Our Story", cart: "Cart", admin: "Admin", login: "Login", orders: "Orders" }
+     };
+   - Use LanguageContext to dynamically display text based on selected language.
+
+2. Shopping Cart System
+   - Create CartContext in src/context/CartContext.tsx to manage cart state.
+   - Add functions: addToCart, removeFromCart, updateQuantity, clearCart.
+   - Show cart item count in Navbar with Lucide React "ShoppingCart" icon.
+   - Create Cart.tsx page to display cart items (brand, name, volume, price, quantity controls (+/-), remove button, total price, promo code input, "Checkout" button with alert).
+   - Add promo code functionality (e.g., "MIR10" for 10% off) with mock logic.
+
+3. Product Listing and Details
+   - In Shop.tsx, show a grid of ProductCard.tsx components from src/data/products.ts (image, brand, name, short description, price of default volume, rating, "View Details" button).
+   - In ProductDetail.tsx, use dynamic routing (/shop/:id) to show full product details (brand, name, gender, description, group, notes pyramid, volume selector dropdown, price, releaseYear, rating, reviews, "Add to Cart" button).
+   - Add a volume selector dropdown (e.g., 30ml, 50ml, 100ml) that dynamically updates the displayed price and stock based on the selected variant (use useState to track selected volume).
+
+4. Filtering System
+   - Create FilterBar.tsx in src/components/ with:
+     - Price range slider (e.g., $50-$200).
+     - Category checkboxes (e.g., "Floral", "Woody", "Fresh", "Oriental", "Other" in selected language).
+     - Gender filter (men, women, unisex).
+     - Sort dropdown (e.g., "Price: Low to High", "Rating" in selected language).
+   - In Shop.tsx, add FilterBar on the left (desktop) or collapsible (mobile).
+   - Filter products dynamically based on user input.
+
+5. Search Functionality
+   - Create SearchBar.tsx in src/components/ with a text input and Lucide React "Search" icon.
+   - Add SearchBar to Navbar and Shop.tsx.
+   - Filter products in Shop.tsx based on search input (match name or description, case-insensitive).
+
+6. Admin Panel
+   - Create Admin.tsx page at /admin route (protected with mock login, e.g., password "admin123" in localStorage).
+   - Create AdminContext.tsx in src/context/ to manage admin state.
+   - Features in Admin.tsx:
+     - Product list table (brand, name, price, category, stock, gender, volume options, rating, edit/delete buttons).
+     - "Add Product" form (brand, name, gender, description, shortDescription, group, notes, image URL, variants with volume/price/stock, releaseYear).
+     - Edit product modal (pre-filled form).
+     - Delete product button (remove from mock data).
+     - Review management section (view and delete mock reviews).
+   - Use localStorage to persist admin changes.
+
+7. Navbar Enhancements
+   - Make Navbar.tsx responsive with a hamburger menu for mobile (Lucide React "Menu" icon to toggle).
+   - Add links: "Home" (/), "Shop" (/shop), "Our Story" (/story), "Cart" (/cart), "Orders" (/orders), "Admin" (/admin), "Login" (/login).
+   - Include SearchBar, LanguageSwitcher, and cart item count.
+
+8. Home Page Enhancements
+   - In Home.tsx, add a full-screen hero section with a perfume image, tagline "by Mirbabayev ilə Əbədi Ətirləri Kəşf Et" (AZ), and "Shop Now" button linking to /shop.
+   - Add a "Featured Products" section with 3 ProductCard.tsx components from mock data.
+   - Animate hero and cards with fade-in effects.
+
+9. Story Page Enhancements
+   - In Story.tsx, add a heading "Hekayəmiz" (AZ), a paragraph ("by Mirbabayev əbədi ətirlər yaradır..."), and an image.
+   - Animate content with a slide-in effect on on scroll.
+
+10. Mock Data (src/data/products.ts)
+    - Add this data:
+      export const products = [
+        { id: "1", brand: "by Mirbabayev", name: { az: "Amber Noir", ru: "Янтарь Нуар", en: "Amber Noir" }, gender: "unisex", description: { az: "Kəhrəba və ədviyyatla zəngin, isti ətir.", ru: "Теплый аромат с янтарем и специями.", en: "A rich, warm scent with amber and spice." }, shortDescription: { az: "İsti və ədviyyatlı", ru: "Теплый и пряный", en: "Warm and spicy" }, group: "Woody", notes: { top: { az: "Berqamot", ru: "Бергамот", en: "Bergamot" }, heart: { az: "Ədviyyat", ru: "Специи", en: "Spices" }, base: { az: "Kəhrəba", ru: "Янтарь", en: "Amber" } }, variants: [{ volume: 30, price: 80, stock: 15 }, { volume: 50, price: 120, stock: 10 }, { volume: 100, price: 200, stock: 5 }], image: "https://via.placeholder.com/300", releaseYear: 2022, rating: 4.5 },
+        { id: "2", brand: "by Mirbabayev", name: { az: "Velvet Rose", ru: "Бархатная Роза", en: "Velvet Rose" }, gender: "women", description: { az: "Müşklə incə çiçək notları.", ru: "Мягкие цветочные ноты с мускусом.", en: "Soft floral notes with a hint of musk." }, shortDescription: { az: "Çiçəkli və müşk", ru: "Цветочный и мускусный", en: "Floral and musky" }, group: "Floral", notes: { top: { az: "Gül", ru: "Роза", en: "Rose" }, heart: { az: "Yasəmən", ru: "Жасмин", en: "Jasmine" }, base: { az: "Müşk", ru: "Мускус", en: "Musk" } }, variants: [{ volume: 50, price: 100, stock: 8 }, { volume: 100, price: 150, stock: 5 }], image: "https://via.placeholder.com/300", releaseYear: 2021, rating: 4.8 },
+        { id: "3", brand: "by Mirbabayev", name: { az: "Oud Luxe", ru: "Уд Люкс", en: "Oud Luxe" }, gender: "men", description: { az: "Oud ilə dərin ağac notları.", ru: "Глубокие древесные ноты с удом.", en: "Deep woody notes with a touch of oud." }, shortDescription: { az: "Ağaclı və zəngin", ru: "Древесный и богатый", en: "Woody and rich" }, group: "Oriental", notes: { top: { az: "Zəfəran", ru: "Шафран", en: "Saffron" }, heart: { az: "Ağac", ru: "Дерево", en: "Wood" }, base: { az: "Oud", ru: "Уд", en: "Oud" } }, variants: [{ volume: 75, price: 180, stock: 8 }], image: "https://via.placeholder.com/300", releaseYear: 2023, rating: 4.2 },
+        { id: "4", brand: "by Mirbabayev", name: { az: "Citrus Veil", ru: "Цитрусовая Вуаль", en: "Citrus Veil" }, gender: "unisex", description: { az: "İncə şirinliklə təzə sitrus.", ru: "Свежий цитрус с легкой сладостью.", en: "Fresh citrus with a subtle sweetness." }, shortDescription: { az: "Təzə və şirin", ru: "Свежий и сладкий", en: "Fresh and sweet" }, group: "Fresh", notes: { top: { az: "Limon", ru: "Лимон", en: "Lemon" }, heart: { az: "Portağal", ru: "Апельсин", en: "Orange" }, base: { az: "Şəkər", ru: "Сахар", en: "Sugar" } }, variants: [{ volume: 30, price: 100, stock: 0 }], image: "https://via.placeholder.com/300", releaseYear: 2020, rating: 4.0 },
+        { id: "5", brand: "by Mirbabayev", name: { az: "Sandal Bliss", ru: "Сандаловое Блаженство", en: "Sandal Bliss" }, gender: "women", description: { az: "Çiçək izləri ilə kremli sandal ağacı.", ru: "Кремовый сандал с цветочными нотами.", en: "Creamy sandalwood with floral hints." }, shortDescription: { az: "Kremli və çiçəkli", ru: "Кремовый и цветочный", en: "Creamy and floral" }, group: "Floral", notes: { top: { az: "Bənövşə", ru: "Фиалка", en: "Violet" }, heart: { az: "Sandal", ru: "Сандал", en: "Sandalwood" }, base: { az: "Vanil", ru: "Ваниль", en: "Vanilla" } }, variants: [{ volume: 50, price: 130, stock: 15 }, { volume: 100, price: 220, stock: 3 }], image: "https://via.placeholder.com/300", releaseYear: 2022, rating: 4.7 }
+      ];
+
+11. Mock Reviews (src/data/reviews.ts)
+    - Add this data:
+      export const reviews = [
+        { productId: "1", user: "Aysel", rating: 5, comment: { az: "Əla ətir!", ru: "Отличный аромат!", en: "Great scent!" } },
+        { productId: "2", user: "Ivan", rating: 4, comment: { az: "Gül notları çox xoşdur.", ru: "Розовые ноты очень приятные.", en: "Rose notes are very nice." } }
+      ];
+
+12. Styling and Animations
+    - Use Tailwind CSS: white background, black/gray text, black buttons.
+    - Add Framer Motion animations:
+      - Fade-in for product cards in Shop.tsx and Home.tsx.
+      - Slide-in for Story.tsx and Admin.tsx content on scroll.
+      - Hover scale (1.05) for buttons and cards.
+      - Modal fade-in for admin edit form and login.
+
+13. Routing (App.tsx)
+    - Set up routes:
+      - "/" -> Home.tsx
+      - "/shop" -> Shop.tsx
+      - "/shop/:id" -> ProductDetail.tsx
+      - "/story" -> Story.tsx
+      - "/cart" -> Cart.tsx
+      - "/orders" -> OrderHistory.tsx
+      - "/admin" -> Admin.tsx
+      - "/login" -> Login.tsx
+      - "*" -> NotFound.tsx (for 404)
+
+14. Additional Features
+    - Add a "Back to Top" button on Shop.tsx and Cart.tsx (appears after scrolling).
+    - Show a loading spinner (Lucide React "Loader" icon) during mock API delays (e.g., 500ms setTimeout).
+    - Add a "Product Out of Stock" state to ProductDetail.tsx (disable "Add to Cart" if stock is 0 for selected volume).
+    - Add a "Wishlist" feature:
+      - Create WishlistContext.tsx in src/context/ to manage wishlist state.
+      - Add a "heart" icon (Lucide React "Heart") to ProductCard.tsx and ProductDetail.tsx to toggle wishlist.
+      - Show wishlist count in Navbar and a "Wishlist" section in Cart.tsx.
+    - Add a "Currency Switcher" in Navbar (e.g., AZN, USD, EUR) with mock rates (e.g., USD = AZN * 0.59, EUR = AZN * 0.50).
+    - Add a "Contact Us" link in Footer.tsx (mailto:info@mirbabayev.com).
+    - Add a "Recently Viewed" section in Shop.tsx (track last 3 viewed products in localStorage).
+    - Add Footer.tsx with links (Home, Shop, Story, Contact Us), social media icons (Lucide React "Facebook", "Instagram"), and copyright "© 2025 by Mirbabayev".
+    - Add Login.tsx with mock login (username: "user", password: "12345" in localStorage) and redirect to Orders or Admin based on role.
+    - Add OrderHistory.tsx to show mock orders (e.g., product name, volume, date, total price) for logged-in users.
+    - Add NotFound.tsx with a "Back to Home" button.
+
+15. Accessibility and Performance
+    - Use semantic HTML (<nav>, <main>, <section>, <footer>).
+    - Add aria-labels (e.g., "Səbətə əlavə et" (AZ), "Search Products").
+    - Lazy-load images with loading="lazy".
+    - Debounce search input to improve performance.
+
+16. Deployment
+    - Build with Vite and deploy to Vercel. Provide a live preview link.
+
+Notes:
+- Use placeholder images (e.g., https://via.placeholder.com/300) since back-end will be added later.
+- Persist cart, admin, wishlist, user, and language data in localStorage.
+- Prepare components to fetch from an API later (e.g., replace mock data with fetch calls).
+- Keep code modular, typed with TypeScript, and reusable.
+- Ensure all text updates dynamically with language selection.
+- Ensure price updates dynamically in ProductDetail.tsx and Cart.tsx when volume is changed.
+
+Build this front-end now and provide the complete code with a live preview link.

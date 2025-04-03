@@ -1,0 +1,795 @@
+# LE LABO VEBSAYT STRUKTURU
+
+## BAŞLIQ HİSSƏSİ (HEADER)
+- Logo (sol tərəfdə)
+- Ana menyu (üfüqi)
+  - FINE FRAGRANCES (Ətirlər)
+  - REFILLS (Doldurma)
+  - HOME CREATIONS (Ev kolleksiyası)
+  - BODY — HAIR — FACE (Bədən, saç, üz)
+  - GROOMING (Qulluq)
+  - ODDITIES (Digər məhsullar)
+  - GIFTS (Hədiyyələr)
+  - DISCOVERY (Kəşf)
+  - FILMS (Filmlər)
+  - ABOUT US (Haqqımızda)
+- Hesab/Səbət ikonları (sağ tərəfdə)
+- Axtarış paneli (sağ tərəfdə)
+
+## MEGA MENYU STRUKTURU
+- Hər bir ana menyu bölməsi açıldıqda alt kateqoriyalar görünür
+- Alt kateqoriyalar qruplar şəklində təşkil olunub
+- Məsələn, Fine Fragrances altında:
+  - Classic Collection (bütün ətirlər)
+  - By Format (flakon növləri)
+
+## ANA SƏHFƏ STRUKTURU (HOME PAGE)
+- Tam ekran slayder/karusel (yeni məhsul tanıtımları)
+- Ən populyar məhsullar bloku
+- Məhsul kateqoriya naviqasiyası
+- Marka haqqında qısa məlumat
+- Xüsusi təkliflər
+- Yeni kolleksiyalar
+
+## MƏHSUL SİYAHISI SƏHİFƏSİ (PRODUCT LISTING PAGE)
+- Filtrləmə seçimləri (sol tərəfdə)
+- Məhsul kartları şəbəkəsi (grid)
+- Minimalist dizayn
+- Hər məhsul kartında:
+  - Məhsul şəkli
+  - Məhsul adı
+  - Qısa təsvir
+  - Qiymət
+  - Əlavə et (Add to Cart) düyməsi
+
+## MƏHSUL SƏHİFƏSİ (PRODUCT DETAIL PAGE)
+- Böyük məhsul şəkli (sol tərəfdə)
+- Məhsul adı və nömrəsi
+- Məhsul təsviri
+- Qiymət
+- Ölçü seçimi
+- Satın alma düymələri
+- Fərdiləşdirmə seçimi (personalizasiya)
+- Məhsul detalları (tərkibi, istifadə qaydaları)
+- Bənzər məhsullar
+
+## SƏBƏT SƏHİFƏSİ (CART PAGE)
+- Səbətdəki məhsulların siyahısı
+- Hər məhsul üçün miqdar tənzimləmə
+- Ümumi qiymət hesablaması
+- Alış-verişə davam et düyməsi
+- Ödəniş səhifəsinə keçid düyməsi
+
+## HAQQIMIZDA SƏHİFƏSİ (ABOUT US)
+- Şirkət tarixi
+- Markasının fəlsəfəsi
+- Laboratuar konsepti
+- Sənətkarlıq prosesi
+- Komanda haqqında məlumat
+- Mağaza lokasiyaları
+
+## SAYT ALTLIĞI (FOOTER)
+- Naviqasiya linklər qrupları:
+  - Haqqımızda
+  - Müştəri xidməti
+  - Məxfilik və şərtlər
+  - Mağaza tapmaq
+- Abunə formu
+- Sosial media linklər
+- Əlaqə məlumatı
+- Copyright məlumatı
+
+## RESPONSIV DİZAYN
+- Mobil cihazlara adaptiv
+- Mobil versiyada burger menyu
+- Tablet və desktop üçün fərqli görünüşlər
+- Fleks/grid əsaslı tərtibat
+
+## ŞRİFTLƏR VƏ TİPOQRAFİYA
+- Sans-serif əsas şriftlər (Helvetica ailsəsi və ya bənzəri)
+- Versallar (BÖYÜK HƏRFLƏR) ilə yazılmış menyu elementləri
+- İncə/nazik şrift çəkiləri
+- Minimal mətn stilləri
+- Ciddi mətn düzümü və hizalama
+
+## RƏNG PALETİ
+- Ağ (dominant arxa fon)
+- Qara (əsas mətn)
+- Bej/krem (aksent)
+- Minimal rəng istifadəsi
+- Yüksək kontrast
+
+## İNTERAKTİV ELEMENTLƏR
+- Hover effektləri
+- Fade animasiyaları
+- Açılan menyular
+- Karusel slayderler
+- Məhsul etiketlərini fərdiləşdirmə interfeysi
+
+## MƏHSUL KARTI DİZAYNI
+- Minimalist stil
+- Məhsul şəkli
+- Ad
+- Qısa təsvir
+- Həcm/ölçü
+- Qiymət
+- "Add to Cart" (Səbətə əlavə et) düyməsi
+- "Notify Me" (Məlumatlandır) düyməsi
+# LE LABO VEBSAYT DİZAYN ELEMENTLƏRİ
+
+## ŞRİFTLƏR VƏ TİPOQRAFİYA
+- Əsas şrift: Helvetica Neue və ya oxşar sans-serif şriftlər
+- Menyu elementləri: BÖYÜK HƏRF, ultra-nazik şrift çəkisi (Ultra Light/Thin)
+- Başlıqlar: Nazik şrift çəkisi (Light/Thin)
+- Məhsul adları: BÖYÜK HƏRF, normal şrift çəkisi
+- Mətn korpusu: Light/Regular şrift çəkisi, kiçik mətn ölçüsü
+- Şrift hündürlüyü: Sıx sətir aralığı, minimalist görünüş
+- Alt başlıqlar: Kiçik şrift ölçüsü, boz rəng
+- Düymə mətnləri: Kiçik hərf, nazik şrift çəkisi, minimal kənar boşluqlar
+
+## RƏNG PALETİ
+- Ana rənglər:
+  - Ağ (#FFFFFF) - dominant arxa fon rəngi
+  - Qara (#000000) - əsas mətn rəngi
+  - Açıq bej/krem (#F5F5F0) - ikinci dərəcəli arxa fon rəngi
+  - Tünd boz (#333333) - ikinci dərəcəli mətn rəngi
+  - Açıq boz (#CCCCCC) - ara xətlər və ikinci dərəcəli elementlər
+- Minimal rəng istifadəsi
+- Yüksək kontrast
+- Kölgələr və gradient yoxdur, hamısı solid/tam rənglərdir
+- Sadə, təbii və təmiz görünüş
+
+## LAYOUT (TƏRTIBAT) SİSTEMİ
+- 12 sütunlu grid sistemi
+- Bol boş sahə istifadəsi
+- Asimmetrik layout - sol tərəfdə daha çox məzmun
+- Səliqəli düzüm və hizalamalar
+- Məzmun blokları arasında böyük məsafələr
+- Məzmunların hizalanması: sol-üst hizalama əsasən
+- Horizontal xətlər ayırıcı kimi istifadə edilir
+- Elementlər arasında böyük neqativ sahə
+
+## UI (İSTİFADƏÇİ İNTERFEYSİ) KOMPONENTLƏRİ
+- Düymələr: 
+  - İncə sərhədlər və ya sərhədsiz
+  - Minimal iç və kənar boşluqlar
+  - Hover zamanı rəng dəyişməsi
+  - Həqiqətən minimal görünüş
+- Formalar:
+  - Minimal görünüşlü input sahələri
+  - Nazik alt xətlər
+  - Placeholder mətnləri açıq-boz rəngdə
+  - Label mətnləri kiçik şrift ilə
+- Açılan menyular:
+  - Ağ arxa fon
+  - Kölgəsiz tərtibat
+  - İncə sərhədlər və ya sərhədsiz
+  - Hover zamanı açıq boz arxa fon
+- İkonlar:
+  - Minimalist xətt stili
+  - Kiçik ölçülü
+  - İncə cizgilər
+  - Mətnə bənzər qalınlıq
+
+## MƏHSUL KARTLARI
+- Ağ arxa fon
+- Məhsul şəkli ortada
+- Məhsul adı BÖYÜK HƏRFLƏRLƏ
+- Məhsul növü kiçik hərflərlə, açıq boz rəngdə
+- Həcm/ölçü məlumatı kiçik şrift ilə
+- Qiymət minimalist stil ilə göstərilir
+- "Add to Cart" və "Notify Me" düymələri minimalist stilidə
+- Hover zamanı məhsul şəkli üzərində kiçik effektlər
+- Kartların ətrafında kölgə və əlavə bəzəklər yoxdur
+
+## ŞƏKİLLƏR VƏ VİZUAL ELEMENT STİLİ
+- Yüksək keyfiyyətli, təmiz məhsul fotoqrafiyası
+- Neytral arxa fonlar, adətən ağ
+- Yüksək kontrast və aydın detallar
+- Məhsullar frontal göstərilir
+- İşıqlandırma yumşaq və təbii
+- Kölgələr minimal
+- Teksturalar aydın göstərilir
+- Şəkillərə əlavə filtr və ya effektlər tətbiq edilmir
+
+## ANİMASİYA VƏ KEÇİDLƏR
+- Minimal və zərif animasiyalar
+- Fade-in/fade-out keçidlər
+- Hover vəziyyəti zamanı səlis rəng dəyişmələri
+- Yüklənmə animasiyaları sadə və minimalist
+- Səhifə keçidləri səlis və tez
+- Elementlərin hərəkəti təbii və asta
+- Heç bir mürəkkəb və ya ağır animasiya yoxdur
+
+## RESPONSIV DİZAYN XÜSUSİYYƏTLƏRİ
+- Mobil:
+  - Burger menyu
+  - Tək sütun layout
+  - Böyük toxunma sahələri
+  - Daha böyük şrift ölçüləri
+  - Daha kompakt məhsul kartları
+- Tablet:
+  - 2 sütun məhsul kartları
+  - Yarı-açıq menyular
+  - Adaptiv şriftlər
+- Desktop:
+  - Tam açıq menyular
+  - 3 və ya 4 sütun məhsul kartları
+  - Genişləndirilmiş məzmun
+  - Daha çox boş sahə istifadəsi
+
+## LABORATUAR ESTETİKASI
+- Etiketlər tibbi/elmi görünüşə bənzəyir
+- Məhsul nömrələri hər addan sonra (məs. SANTAL 33)
+- Texniki məlumatların ön plana çıxarılması
+- Şrift və layout ilə laboratoriya hissi yaratmaq
+- Tərkib maddələri və formula kimi məlumatların vurğulanması
+- Ağ və neytral rənglərin dominant olması ilə laboratoriya estetikası
+
+## BREND KONSEQUENTLIYI
+- Bütün səhifələrdə eyni şrift və rəng sistemi
+- Eyni layout və grid sistemi
+- Eyni UI elementləri
+- Logo yerləşdirməsi sabit
+- Brend mesajı bütün səhifələrdə sistemli şəkildə təqdim edilir
+- Laboratoriya və əl işi konsepti hər yerdə hiss olunur
+# LE LABO VEBSAYT UX (USER EXPERIENCE) ELEMENTLƏRİ
+
+## NAVİQASİYA TƏCRÜBƏSI
+- Sabit və üfüqi yuxarı menyu (desktop versiyasında)
+- Məhsul kateqoriyalarına sürətli giriş
+- Mega-menyu açıldıqda məhsulların məntiqi qruplaşdırılması
+- Ana səhifədən məhsul kateqoriyalarına bir kliklə keçid
+- Asan və intuitiv naviqasiya məntiqi
+- "Geri" düyməsi olmadan əvvəlki səhifəyə qayıtmaq imkanı
+- İerarxik səhifə quruluşu, lakin hamar keçidlər
+
+## AXTARIŞ TƏCRÜBƏSI
+- Sadə axtarış paneli dizaynı
+- Axtarış prosesi zamanı canlı təkliflər (live suggestions)
+- Populyar axtarış terminləri göstərilir
+- Axtarış nəticələri məhsul kartları şəklində göstərilir
+- Filtrlər ilə axtarış nəticələrini tez daraltmaq imkanı
+- Axtarış məlumatlarını yadda saxlama (axtarış tarixçəsi)
+- Məhsul və kateqoriya üzrə axtarış seçimi
+
+## MƏHSUL NÜMAYIŞI
+- Təmiz və aydın məhsul şəkilləri
+- Məhsul haqqında yığcam məlumat
+- Məhsulun ölçüləri və qiymətləri aydın göstərilir
+- Əlçatan "Add to Cart" və "Notify Me" düymələri
+- Məhsul tərkibi və üstünlükləri sadə şəkildə təqdim edilir
+- Bənzər məhsulların tövsiyə edilməsi
+- Məhsul etiketlərinin fərdiləşdirilməsi imkanı
+
+## FƏRDİLƏŞDİRMƏ TƏCRÜBƏSI
+- Etiket fərdiləşdirmə interfeysi sadə və istifadəsi asandır
+- Daxil edilən mətnin etiket üzərində canlı ön baxışı
+- Məhsul etiketində maksimum 23 simvol məhdudiyyəti
+- Fərdiləşdirmə haqqında aydın qaydalar
+- Fərdiləşdirilmiş məhsulların final satış olduğuna dair bildiriş
+- Fərdiləşdirməni ötürmək seçimi
+
+## SƏBƏT VƏ ÖDƏMƏ TƏCRÜBƏSI
+- Sadə və aydın səbət interfeysi
+- Məhsulları səbətə əlavə etdikdən sonra bildiriş
+- Səbətdəki məhsulları asanlıqla yeniləmək imkanı
+- Ödəmə prosesi addım-addım sadə şəkildə göstərilir
+- Davamlı səbət funksionallığı (tab/sessiya arası)
+- Müxtəlif ödəmə metodları
+- Sadə forma doldurma təcrübəsi
+
+## İSTİFADƏÇİ HESABI TƏCRÜBƏSI
+- Asan qeydiyyat və giriş prosesi
+- Sosial şəbəkə hesabları ilə giriş imkanı
+- İstifadəçi profili sadə və funksional
+- Sifariş tarixçəsi və statusu izləmə
+- Şəxsi məlumatları asanlıqla yeniləmək imkanı
+- Sevimli məhsulları saxlama (Wishlist)
+- Bildiriş parametrlərini idarə etmək
+
+## MOBİL TƏCRÜBƏ
+- Tam responsiv dizayn
+- Mobil cihazlara optimizasiya edilmiş istifadəçi interfeysi
+- Burger menyu ilə asan naviqasiya
+- Touch-friendly elementlər və düymələr
+- Scroll-friendly məzmun
+- Sürətli yüklənmə
+- Kompakt məhsul kartları
+- Mobil-məxsus funksionallıq (swipe actions)
+
+## PERFORMANSVƏİSTİFADƏEDİLƏBİLİRLİK
+- Sürətli səhifə yüklənməsi
+- Optimizasiya edilmiş şəkillər və animasiyalar
+- İntuitivli olaraq başa düşülən interfeys elementləri
+- Səhifələr arası rahat keçidlər
+- Formaların avtomatik doldurulması
+- Xətaların aydın və konstruktiv göstərilməsi
+- İstifadəçi qərarlarının təsdiqlənməsi
+
+## ERİŞİLƏBİLİRLİK FUNKSİYALARI
+- Ekran oxuyucuları ilə uyğunluq
+- Klaviatura naviqasiyası dəstəyi
+- Yüksək kontrast seçenekləri
+- Böyüdülə bilən mətn
+- Alt mətn şəkillər üçün
+- ARIA atributları
+- Semantik HTML strukturu
+
+## SADİQLİK VƏ BREND TƏCRÜBƏSI
+- Brend dəyərləri bütün səhifələrdə aşkar hiss olunur
+- Laboratoriya konsepti UX ilə dəstəklənir
+- Davamlı vizual identifikasiya
+- Yüksək keyfiyyət hissi yaradan təcrübə
+- Minimal, lakin effektiv animasiyalar
+- Ətraflı məhsul təsviri
+
+## TEXNİKİ DİZAYN QEYDLƏR
+- HTML5 və CSS3 istifadəsi
+- Flexbox/Grid layout sistemi
+- JavaScript ilə interaktiv elementlər
+- Responsiv breakpoints:
+  - Mobile: 360px - 767px
+  - Tablet: 768px - 1023px
+  - Desktop: 1024px+
+- SVG ikonlar və vektor qrafikaları
+- Lazy loading şəkillər
+- Minimal JavaScript framework asılılığı
+# LE LABO VEBSAYT MƏHSUL KARTLARI VƏ KOMPONENTLƏR
+
+## MƏHSUL KARTI (PRODUCT CARD)
+```html
+<div class="product-card">
+  <div class="product-image">
+    <img src="product-image.jpg" alt="Product Name">
+  </div>
+  <div class="product-info">
+    <h3 class="product-title">SANTAL 33</h3>
+    <p class="product-type">eau de parfum</p>
+    <p class="product-size">50 ml / 1.7 fl oz</p>
+    <div class="product-actions">
+      <button class="btn-add-cart">Add to Cart</button>
+      <button class="btn-notify">Notify Me</button>
+    </div>
+  </div>
+</div>
+```
+
+### MƏHSUL KARTI STİLİ
+- Sadə, minimalist dizayn
+- Ağ arxa fon
+- Məhsul şəkli kart sahəsinin çox hissəsini əhatə edir
+- Məhsul məlumatları alt hissədə yerləşdirilir
+- Nazik şrift çəkisi mətn elementləri üçün
+- BÖYÜK HƏRF başlıqlar
+- Kiçik hərf məhsul növü və ölçü
+- "Add to Cart" düyməsi qabarıq, "Notify Me" daha az qabarıq
+- Hover zamanı kiçik effektlər (məs. mətn rənginin dəyişməsi)
+- Kart kölgələri və əlavə bəzəkləri yoxdur
+- Bütün elementlər sol hizalanır
+
+## MEGA MENYU KOMPONENTİ
+```html
+<div class="mega-menu">
+  <div class="column">
+    <h4 class="menu-heading">Classic Collection</h4>
+    <ul class="menu-list">
+      <li><a href="/fragrances/santal-33">SANTAL 33</a></li>
+      <li><a href="/fragrances/rose-31">ROSE 31</a></li>
+      <li><a href="/fragrances/bergamote-22">BERGAMOTE 22</a></li>
+      <!-- Digər məhsullar -->
+    </ul>
+  </div>
+  <div class="column">
+    <h4 class="menu-heading">By Format</h4>
+    <ul class="menu-list">
+      <li><a href="/format/eau-de-parfum">EAU DE PARFUM</a></li>
+      <li><a href="/format/discovery">DISCOVERY</a></li>
+      <li><a href="/format/body-lotion">BODY LOTION</a></li>
+      <!-- Digər formatlar -->
+    </ul>
+  </div>
+  <div class="column-image">
+    <img src="featured-product.jpg" alt="Featured Product">
+    <p class="featured-text">EUCALYPTUS 20</p>
+  </div>
+</div>
+```
+
+### MEGA MENYU STİLİ
+- Ağ arxa fon
+- 2-3 sütun layout
+- İncə boz bölücü xətlər
+- Sütun başlıqları kiçik amma aydın
+- Məhsul siyahıları sıx yerləşdirilir
+- Bəzi hallarda sağ tərəfdə xüsusi məhsul şəkli
+- Hover zamanı linklərin rəngi və ya altxətli olması
+- En az padding ilə kompakt tərtibat
+- Kölgələr və qradientlər yoxdur
+- Bəsit animasiyalar (fade in/out)
+
+## AXTARIŞ KOMPONENTİ
+```html
+<div class="search-component">
+  <form action="/search" method="get">
+    <input type="text" name="q" placeholder="Search" class="search-input">
+    <button type="submit" class="search-button">
+      <span class="visually-hidden">Search</span>
+      <svg class="icon-search"><!-- Search icon SVG --></svg>
+    </button>
+  </form>
+  <div class="search-results">
+    <h4>POPULAR SEARCHES</h4>
+    <ul class="popular-searches">
+      <li><a href="/search?q=santal+33">SANTAL 33</a></li>
+      <li><a href="/search?q=discovery+samples">Discovery samples</a></li>
+      <li><a href="/search?q=classic+candles">Classic candles</a></li>
+      <!-- Digər populyar axtarışlar -->
+    </ul>
+  </div>
+</div>
+```
+
+### AXTARIŞ KOMPONENTİ STİLİ
+- Minimal axtarış sahəsi
+- İncə alt sərhəd, yanlar sərhədsiz
+- İkon kiçik və sadə
+- Fokus olduqda minimal stil dəyişikliyi
+- Placeholder mətn açıq boz rəngdə
+- Axtarış nəticələri popup formada göstərilir
+- Populyar axtarışların minimal stil ilə göstərilməsi
+
+## FƏRDİLƏŞDİRMƏ KOMPONENTİ
+```html
+<div class="personalization-component">
+  <h3 class="personalization-title">Personalize Your Label</h3>
+  <p class="personalization-info">The default text "You" will be printed for creations with no personalization.</p>
+  <p class="personalization-info">Creations with personalized labels are final sale.</p>
+  
+  <div class="personalization-controls">
+    <div class="char-count"><span class="current">0</span> / <span class="max">23</span></div>
+    <input type="text" maxlength="23" class="personalization-input" placeholder="Enter your text">
+    
+    <div class="personalization-preview">
+      <img src="label-preview.jpg" alt="Label Preview">
+      <span class="preview-text">Your custom text here</span>
+    </div>
+    
+    <div class="personalization-actions">
+      <button class="btn-save">Save Personalization</button>
+      <button class="btn-skip">Skip Personalization</button>
+    </div>
+  </div>
+</div>
+```
+
+### FƏRDİLƏŞDİRMƏ KOMPONENTİ STİLİ
+- Modal pəncərə formasında açılır
+- Ağ arxa fon
+- Aydın sərhədlər
+- Fərdiləşdirmə qaydaları kiçik şrift ilə
+- Simvol sayğacı göstərilir (0/23)
+- Etiket üzərində canlı ön baxış
+- "Save" düyməsi daha qabarıq, "Skip" daha az qabarıq
+- Xəta mesajları qırmızı rəngdə
+
+## NAVİQASİYA MENYUSU
+```html
+<nav class="main-navigation">
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="/fine-fragrances">FINE FRAGRANCES</a></li>
+    <li class="nav-item"><a href="/refills">REFILLS</a></li>
+    <li class="nav-item"><a href="/home-creations">HOME CREATIONS</a></li>
+    <li class="nav-item"><a href="/body-hair-face">BODY — HAIR — FACE</a></li>
+    <li class="nav-item"><a href="/grooming">GROOMING</a></li>
+    <li class="nav-item"><a href="/oddities">ODDITIES</a></li>
+    <li class="nav-item"><a href="/gifts">GIFTS</a></li>
+    <li class="nav-item"><a href="/discovery">DISCOVERY</a></li>
+    <li class="nav-item"><a href="/films">FILMS</a></li>
+    <li class="nav-item"><a href="/about-us">ABOUT US</a></li>
+  </ul>
+</nav>
+```
+
+### NAVİQASİYA MENYUSU STİLİ
+- Üfüqi sıralanaraq göstərilir
+- Bütün menyu elementləri BÖYÜK HƏRFLƏRlə
+- Elementlər arasında bərabər məsafə
+- Nazik şrift çəkisi
+- Aktiv element üçün fərqli stil (alt xətt və ya stil)
+- Hover effekti zamanı minimal rəng dəyişimi
+- Səhifə scroll olunduqda menyu sabit qalır
+- Mega-menyu açıldıqda arxa fon səhifəni qaranlıqlaşdırır
+
+## FOOTER KOMPONENTİ
+```html
+<footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-column">
+      <h4 class="footer-heading">About Le Labo</h4>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/refill-program">Refill Program</a></li>
+        <li><a href="/discovery">Discovery</a></li>
+        <li><a href="/journal">Le Journal</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h4 class="footer-heading">Client Care</h4>
+      <ul class="footer-links">
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/shipping">Shipping & Handling</a></li>
+        <li><a href="/returns">Return & Refund</a></li>
+        <li><a href="/order-status">Order Status</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h4 class="footer-heading">Privacy & Terms</h4>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms & Conditions</a></li>
+        <li><a href="/sale-terms">Terms & Conditions of Sale</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h4 class="footer-heading">Visit Us</h4>
+      <ul class="footer-links">
+        <li><a href="/stores">Store Locator</a></li>
+        <li><a href="/pickup">In-Store Pickup</a></li>
+        <li><a href="/phone-orders">Phone Orders</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p class="copyright">Le Labo</p>
+  </div>
+</footer>
+```
+
+### FOOTER KOMPONENTİ STİLİ
+- Ağ arxa fon
+- 4 sütunlu layout 
+- Sütun başlıqları kiçik qalın şrift ilə
+- Link mətnləri kiçik və nazik şrift çəkisi ilə
+- Bərabər məsafəli və təmiz düzülüş
+- Hover vəziyyətində minimal rəng dəyişməsi
+- Üst hissədə incə boz ayırıcı xətt
+- Alt hissədə brend adı/copyright kompakt formatda
+
+## SƏBƏT POPUP KOMPONENTİ
+```html
+<div class="cart-popup">
+  <div class="cart-header">
+    <h3 class="cart-title">Cart</h3>
+    <button class="btn-close">×</button>
+  </div>
+  
+  <div class="cart-items">
+    <div class="cart-item">
+      <div class="item-image">
+        <img src="item-image.jpg" alt="SANTAL 33">
+      </div>
+      <div class="item-details">
+        <h4 class="item-title">SANTAL 33</h4>
+        <p class="item-type">eau de parfum</p>
+        <p class="item-size">50 ml / 1.7 fl oz</p>
+        <div class="item-quantity">
+          <button class="btn-decrease">-</button>
+          <span class="quantity">1</span>
+          <button class="btn-increase">+</button>
+        </div>
+        <p class="item-price">$215.00</p>
+        <button class="btn-remove">Remove</button>
+      </div>
+    </div>
+    <!-- Digər səbət elementləri -->
+  </div>
+  
+  <div class="cart-summary">
+    <div class="summary-row">
+      <span class="summary-label">Subtotal</span>
+      <span class="summary-value">$215.00</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-label">Shipping</span>
+      <span class="summary-value">Calculated at checkout</span>
+    </div>
+  </div>
+  
+  <div class="cart-actions">
+    <button class="btn-checkout">Checkout</button>
+    <button class="btn-continue">Continue Shopping</button>
+  </div>
+</div>
+```
+
+### SƏBƏT POPUP KOMPONENTİ STİLİ
+- Sağ tərəfdən slide-in animasiya ilə açılır
+- Ağ arxa fon
+- Səhifənin qalan hissəsi yarı-şəffaf qara arxa fon
+- Səbət başlığı minimal, alt tərəfdə nazik xətt
+- Səbət elementləri kompakt şəkildə göstərilir
+- Miqdar tənzimləyiciləri sadə və istifadəsi asan
+- "Remove" düyməsi qeyri-qabarıq
+- Ümumi məbləğ aydın şəkildə göstərilir
+- "Checkout" düyməsi qabarıq, "Continue Shopping" qeyri-qabarıq
+# LE LABO DİZAYN VƏ UX İLHAM NOTLARI
+
+## DİZAYN FƏLSƏFƏSİ
+Le Labo vebsaytı minimalist, təmiz və praktik bir dizayn fəlsəfəsi daşıyır. Bu fəlsəfə aşağıdakı prinsiplərdən ibarətdir:
+
+1. **Az, Lakin Daha Çox Prinsip**: Minimalist dizayn, yalnız lazımi elementlərin saxlanması
+2. **Məzmun Əsaslı Dizayn**: Məhsulun özünə və məlumatlarına diqqəti çəkmək
+3. **Laboratoriya Estetikası**: Elmi/laboratoriya görünüşü, texniki detallar
+4. **Əl İşçiliyi Vurğusu**: Sənətkarlıq və şəxsi toxunuş hissi
+5. **İnformasiya Açıqlığı**: Məhsullar və məlumatların aydın təqdimatı
+6. **Lüks, Lakin Sadə**: Bahalı hiss, lakin həddən artıq dəbdəbəli olmayan
+
+## DİZAYN İSTİFADƏSİ ÜÇÜN ƏSAS NÖQTƏLƏR
+
+### 1. Şriftlər və Tipoqrafiya
+- Sans-serif şriftlər istifadə edilməli (Helvetica Neue, Arial və ya oxşarları)
+- Mətnlərin çoxu BÖYÜK HƏRF ilə yazılmalı, xüsusən də naviqasiya və başlıqlarda
+- Nazik şrift çəkiləri (300 və ya light) əsas mətnlər üçün
+- Şrift ölçüləri kiçik olmalı, məsələn:
+  - Ana menyu: 12-14px
+  - Başlıqlar: 18-22px
+  - Mətn: 12-14px
+- Sətir aralığı sıx olmalı
+- Mətn blokları qısa və yığcam tutulmalı
+
+### 2. Rəng Paleti
+- Dominant ağ fon
+- Qara mətn
+- Açıq bej/krem aksent
+- Açıq boz ikinci dərəcəli mətn
+- Konkret rəng kodları:
+  - Ağ: #FFFFFF
+  - Qara: #000000
+  - Bej: #F5F5F0
+  - Açıq boz: #CCCCCC
+  - Tünd boz: #333333
+
+### 3. Layout və Boşluq İstifadəsi
+- 12 sütunlu grid sistemi əsas alınmalı
+- Bol boş sahə (negative space) istifadə edilməli
+- Elementlər arasında böyük məsafələr
+- Asimmetrik layout, sol tərəfə əyilmiş məzmun
+- Məsafələr arasında harmoniya - eyni boşluq ölçüləri
+- Responsive dizayn üçün breakpointlər:
+  - Mobile: 360px - 767px
+  - Tablet: 768px - 1023px
+  - Desktop: 1024px+
+
+### 4. UI Elementləri
+- Düymələr minimal stilində, incə sərhədlər və ya sərhədsiz
+- Formlar sadə, alt xətlər ilə
+- İkonlar kiçik və incə
+- Qısa və aydın etiketlər
+- Hover effektləri sadə rəng dəyişmələri
+- Məhsul kartları sadə və funksional, artıq bəzəklərdən uzaq
+
+### 5. Şəkillər və Vizuallar
+- Yüksək keyfiyyətli məhsul fotoları
+- Ağ, təmiz arxa fon
+- Neytral işıqlandırma
+- Minimalist kompozisiya
+- Məhsullar mərkəzdə, frontal görünüş
+- Artıq filtr və effektlərdən qaçınmaq
+
+## UX DİZAYN PRİNSİPLƏRİ
+
+### 1. İstifadəçi Yolları (User Flows)
+- Sadə və birbaşa naviqasiya
+- Az klik ilə məhsullara çatma
+- Məntiqi kateqoriya bölgüləri
+- Aydın informasiya arxitekturası
+- Asan axtarış imkanı
+
+### 2. İnteraktiv Elementlər
+- Sadə və intuitiv interfeys
+- Minimal animasiyalar
+- Dönüş bildirişləri (feedback)
+- Fade-in/fade-out keçidlər
+- Görünməz, lakin effektiv mikro-interaksiyalar
+
+### 3. Məhsul Nümayişi
+- Məhsul şəkli dominant
+- Yığcam, lakin tam məlumat
+- Ölçü və qiymət aydınlığı
+- Xüsusiyyətlərin sadə təqdimatı
+- Tərkib və istifadə haqqında dəqiq məlumat
+
+### 4. Məhsul Fərdiləşdirməsi
+- Sadə və istifadəçi dostu proses
+- Canlı önbaxış
+- Aydın məhdudiyyətlər
+- Yaxşı izahat
+- Çevik düzəliş imkanı
+
+### 5. Səbət və Ödəniş
+- Şəffaf qiymətləndirmə
+- Minimum addımlı ödəniş prosesi
+- Vizual dəstək (mərhələlər)
+- Dönüş bildirişləri
+- Səhv düzəltmə asanlığı
+
+## İLHAM ALMAQ ÜÇÜN NÖVBƏTI ADDIMLAR
+
+### 1. Dizayn Örnəyi Üçün
+Əgər Le Labo estetikasının eyni və ya bənzər sahədə tətbiq edilməsini planlaşdırırsınızsa:
+- Laboratuar/tibbi/elmi temalardan istifadə edin
+- Nömrələr və kodlar ilə məhsul adlandırması
+- Texniki spesifikasiya formatında məlumat
+- Tibbi etiketlər kimi etiketlər dizayn edin
+
+### 2. Digər Sahələrə Adaptasiya Üçün
+Əgər bu estetikanı başqa bir sahə üçün adaptasiya etmək istəyirsinizsə:
+- Əsas minimalist prinsipləri qoruyun
+- Sahənizə uyğun terminologiya istifadə edin
+- Laboratoriya stilini sahənizə uyğun transformasiya edin
+- Struktur və grid sistemini saxlayın, məzmunu dəyişdirin
+
+### 3. Mobil Dizayn Üçün
+- Burger menyu ilə əsas naviqasiya
+- Tək sütunda məhsul siyahısı
+- Böyük şəkillər, kiçik mətn
+- Touch-friendly elementlər
+- Kompakt, lakin oxunaqlı məlumat
+
+### 4. Brending Konsequentliyi
+- Bütün səhifələrdə eyni şrift və rəng
+- Tanınan şablon (template) 
+- Naviqasiya təcrübəsində konsequentlik
+- Məhsul təqdimatında vahid stil
+- Brend xüsusiyyətlərinin hər yerdə vurğulanması
+
+## XÜLASƏ: ƏSAS GÖTÜRÜLƏCƏK NÖQTƏLƏR
+
+1. **Minimalizm**: Az element, çox boşluq, daha təsirli dizayn
+2. **Tipoqrafiya Əhəmiyyəti**: BÖYÜK HƏRF, nazik şrift çəkisi, sıx sətir aralığı
+3. **Laboratuar Estetikası**: Tibbi/elmi baxış, texniki məlumatlar
+4. **Funksionallıq**: İstifadəçi təcrübəsini ön planda tutmaq
+5. **Məhsul Fokuslanması**: Məhsulları və keyfiyyəti ön plana çıxarmaq
+6. **Dizayn Harmoniyası**: Bütün elementlərin biri-biri ilə əlaqəli olması
+7. **Şəxsiləşdirmə**: İstifadəçiyə özəl təcrübə təqdim etmək
+8. **Konsequentlik**: Bütün platformalarda eyni stil və təcrübə
+
+Le Labo vebsaytından ilham alaraq, sadə, funksional və estetik cəhətdən zəngin bir istifadəçi təcrübəsi yaratmaq mümkündür. Minimal dizayn, keyfiyyətli məzmun və məhsul fokuslu yanaşma ilə istənilən sahədə təsirli nəticələr əldə etmək olar.
+# LE LABO VEBSAYT ANALİZİ
+
+Bu repozitoriya Le Labo parfüm markasının veb saytının (https://www.lelabofragrances.com/) tam struktur və dizayn analizini əhatə edir. Analiz yeni dizayn layihələri üçün ilham mənbəyi kimi istifadə edilə bilər.
+
+## Repozitoriya Məzmunu
+
+Bu repozitoriyada aşağıdakı fayllar yer alır:
+
+1. `struktur.txt` - Le Labo vebsaytının ümumi strukturu haqqında məlumat
+2. `dizayn-elementleri.txt` - Vebsaytın vizual elementləri və dizayn aspektləri
+3. `ux-elementleri.txt` - İstifadəçi təcrübəsi və interaksiya elementləri
+4. `kartlar-ve-konponentler.txt` - Məhsul kartları və əsas UI komponentlərinin təhlili
+5. `ilham-notlari.txt` - Le Labo dizaynından ilham almaq istəyənlər üçün təkliflər
+
+## Le Labo Dizayn Prinsipləri
+
+Le Labo vebsaytı aşağıdakı əsas prinsiplər üzərində qurulmuşdur:
+
+- **Minimalizm**: Sadə, təmiz və funksional bir dizayn təhcizatı
+- **Laboratoriya Estetikası**: Markanın əl ilə hazırlanmış parfüm konsepsiyasını əks etdirən elmi görünüş
+- **Yüksək Keyfiyyətli Məzmun**: Məhsul və məlumatların diqqətlə təqdimatı
+- **İstifadəçi Dostu İnterfeys**: İntuisiyaya uyğun naviqasiya və interaksiya
+- **Responsiv Dizayn**: Bütün cihazlarda optimal istifadəçi təcrübəsi
+
+## İstifadə Qaydaları
+
+Bu materialları aşağıdakı məqsədlər üçün istifadə edə bilərsiniz:
+
+1. Yeni veb layihələr üçün dizayn ilhamı almaq
+2. E-ticarət saytı dizaynı üçün ən yaxşı praktikalarını öyrənmək
+3. Minimalist UX/UI təcrübələrini araşdırmaq
+4. Lüks markalar üçün onlayn təqdimat strategiyalarını öyrənmək
