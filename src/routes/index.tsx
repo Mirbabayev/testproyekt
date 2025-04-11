@@ -24,9 +24,12 @@ const AdminCatalog = lazy(() => import('../pages/admin/pages/Catalog'));
 const Unauthorized = lazy(() => import('../pages/unauthorized'));
 const Wishlist = lazy(() => import('../pages/wishlist'));
 const Cart = lazy(() => import('../pages/cart'));
+<<<<<<< HEAD
 const Profile = lazy(() => import('../pages/profile'));
 const Orders = lazy(() => import('../pages/profile/orders'));
 const OrderDetails = lazy(() => import('../pages/profile/orders/[id]'));
+=======
+>>>>>>> a81bf9d2c487031ef7ce1ed1cbcf502ff25efaf5
 
 // Yüklənmə komponenti
 function LoadingSpinner() {
@@ -82,6 +85,7 @@ export function AppRoutes() {
           </Layout>
         } />
         
+<<<<<<< HEAD
         {/* İstifadəçi profil səhifəsi */}
         <Route 
           path="/profile/*" 
@@ -100,6 +104,8 @@ export function AppRoutes() {
           } 
         />
         
+=======
+>>>>>>> a81bf9d2c487031ef7ce1ed1cbcf502ff25efaf5
         {/* Auth routes */}
         <Route 
           path="/auth/login" 

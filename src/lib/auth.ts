@@ -8,7 +8,7 @@ const DEFAULT_ADMIN: User = {
   id: 'admin',
   email: 'admin@example.com',
   name: 'Admin User',
-  role: 'admin',
+  role: UserRole.ADMIN,
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString()
 };
@@ -33,7 +33,7 @@ export const getCurrentUser = async (): Promise<User | null> => {
 // Check if user is admin
 export const isAdmin = async (): Promise<boolean> => {
   const currentUser = await getCurrentUser();
-  return currentUser?.role === 'admin';
+  return currentUser?.role === UserRole.ADMIN;
 };
 
 // Sign out user
@@ -58,7 +58,7 @@ export const signUp = async (credentials: RegisterCredentials): Promise<User> =>
     id: Math.random().toString(36).substr(2, 9),
     email: credentials.email,
     name: credentials.name,
-    role: 'user',
+    role: UserRole.USER,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };

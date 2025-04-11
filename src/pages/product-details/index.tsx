@@ -186,347 +186,165 @@ const ProductDetails = () => {
           
           <div className="text-2xl font-bold text-primary mb-8">{product?.price} ₼</div>
           
-          <div className="mb-8">
-            <h3 className="text-base font-semibold text-gray-800 mb-3">Ətir haqqında:</h3>
-            <p className="text-gray-700 leading-relaxed">{product.description}</p>
-          </div>
-          
-          <div className="grid grid-cols-3 gap-4 mb-8">
-            <div className="bg-accent/30 rounded-lg p-4 text-center">
-              <h4 className="text-sm text-gray-500 mb-1">Həcm</h4>
-              <p className="font-medium">{product.size}</p>
-            </div>
-            <div className="bg-accent/30 rounded-lg p-4 text-center">
-              <h4 className="text-sm text-gray-500 mb-1">Konsentrasiya</h4>
-              <p className="font-medium">{product.concentration}</p>
-            </div>
-            <div className="bg-accent/30 rounded-lg p-4 text-center">
-              <h4 className="text-sm text-gray-500 mb-1">Cins</h4>
-              <p className="font-medium">
-                {product.gender === 'kişi' ? 'Kişi' : product.gender === 'qadın' ? 'Qadın' : 'Uniseks'}
-              </p>
-            </div>
-          </div>
-          
-          <div className="mb-8">
-            <div className="flex items-center mb-4">
-              <span className="text-sm font-semibold text-gray-700 mr-4">Miqdar</span>
-              <motion.div 
-                className="flex items-center border border-gray-300 rounded-md overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
+          {/* İstək siyahısına əlavə et & Səbətə əlavə et */}
+          <div className="flex flex-wrap gap-4 mb-8">
+            {/* Miqdar seçimi */}
+            <div className="flex items-center border border-gray-300 rounded-md">
+              <button 
+                onClick={decreaseQuantity}
+                disabled={quantity <= 1}
+                className="w-10 h-10 flex items-center justify-center text-gray-600 disabled:text-gray-300 disabled:cursor-not-allowed"
               >
-                <motion.button 
-                  onClick={decreaseQuantity}
-                  disabled={quantity <= 1}
-                  className="px-3 py-2 border-r border-gray-300 text-gray-500 hover:bg-gray-100 disabled:opacity-50"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Minus className="w-4 h-4" />
-                </motion.button>
-                <motion.span 
-                  className="w-12 text-center py-2"
-                  key={quantity}
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {quantity}
-                </motion.span>
-                <motion.button 
-                  onClick={increaseQuantity}
-                  className="px-3 py-2 border-l border-gray-300 text-gray-500 hover:bg-gray-100"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Plus className="w-4 h-4" />
-                </motion.button>
-              </motion.div>
+                <Minus className="h-4 w-4" />
+              </button>
+              <span className="w-12 text-center">{quantity}</span>
+              <button 
+                onClick={increaseQuantity}
+                className="w-10 h-10 flex items-center justify-center text-gray-600"
+              >
+                <Plus className="h-4 w-4" />
+              </button>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button 
-                className="parfumbar-btn flex-1 flex items-center justify-center gap-2 py-3"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={handleAddToCart}
-              >
-                <ShoppingBag className="w-5 h-5" />
-                Səbətə əlavə et
-              </motion.button>
-              <motion.button 
-                onClick={toggleWishlist}
-                className={`parfumbar-btn-outline flex items-center justify-center gap-2 py-3 ${
-                  isInWishlist(product.id) ? 'bg-primary/5 text-primary' : ''
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Heart className={`w-5 h-5 ${isInWishlist(product.id) ? 'fill-primary' : ''}`} />
-                {isInWishlist(product.id) ? 'Seçilmişlərdədir' : 'Seçilmişlərə əlavə et'}
-              </motion.button>
+            <button 
+              onClick={toggleWishlist}
+              className={`flex items-center justify-center px-4 py-2 rounded-md ${
+                isInWishlist(product.id) 
+                  ? 'bg-primary/10 text-primary' 
+                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+              } transition-colors`}
+              title={isInWishlist(product.id) ? 'İstək siyahısından çıxar' : 'İstək siyahısına əlavə et'}
+            >
+              <Heart className={`h-5 w-5 mr-2 ${isInWishlist(product.id) ? 'fill-primary text-primary' : ''}`} />
+              {isInWishlist(product.id) ? 'İstək siyahısındadır' : 'İstək siyahısına əlavə et'}
+            </button>
+            
+            <button 
+              onClick={handleAddToCart}
+              className="flex items-center justify-center px-6 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
+              disabled={!product.inStock}
+            >
+              <ShoppingBag className="h-5 w-5 mr-2" />
+              Səbətə əlavə et
+            </button>
+          </div>
+          
+          {/* Qısa məlumat */}
+          <div className="prose prose-sm mb-8">
+            <p className="text-gray-600">{product.description}</p>
+          </div>
+          
+          {/* Xüsusiyyətlər */}
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="flex items-start">
+              <div className="bg-accent/50 p-2 rounded-md mr-3">
+                <Clock className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-gray-900">Davamlılıq</h3>
+                <p className="text-sm text-gray-600">{product.longevity}</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-accent/50 p-2 rounded-md mr-3">
+                <Gift className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-gray-900">Ətir ailəsi</h3>
+                <p className="text-sm text-gray-600">{product.fragranceFamily}</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-accent/50 p-2 rounded-md mr-3">
+                <Sparkles className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-gray-900">Konseptləşdirmə</h3>
+                <p className="text-sm text-gray-600">{product.concentration}</p>
+              </div>
             </div>
           </div>
         </motion.div>
       </div>
       
-      {/* Məhsul haqqında */}
-      <motion.section 
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="my-12 bg-gradient-to-r from-gray-50 to-accent/10 p-8 rounded-xl shadow-sm"
-      >
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3">
-            <ShoppingBag className="h-4 w-4 text-primary" />
-          </span>
-          Məhsul haqqında
-        </h2>
+      {/* Əlavə məlumat bölmələri */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Məhsul haqqında</h2>
         
-        <div className="border-t border-gray-200 pt-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
-              <h3 className="text-lg font-medium text-primary mb-3 flex items-center">
-                <ShoppingBag className="h-5 w-5 mr-2 text-primary/70" />
-                Parfüm Detayları
-              </h3>
-              <div className="flex-1">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {product.description}
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-accent/30 rounded-lg p-3">
-                    <h4 className="text-sm text-gray-500 mb-1">Həcm</h4>
-                    <p className="font-medium">{product.size}</p>
-                  </div>
-                  <div className="bg-accent/30 rounded-lg p-3">
-                    <h4 className="text-sm text-gray-500 mb-1">Konsentrasiya</h4>
-                    <p className="font-medium">{product.concentration}</p>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">Ətir notları</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">Üst notlar:</h4>
+                <p className="text-sm text-gray-600">{notes.top.join(', ')}</p>
               </div>
-            </div>
-            
-            <div className="bg-white p-5 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
-              <h3 className="text-lg font-medium text-primary mb-3 flex items-center">
-                <Star className="h-5 w-5 mr-2 text-primary/70" />
-                Xüsusiyyətlər
-              </h3>
-              <div className="flex-1">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {product.gender === 'kişi' 
-                    ? `${product.brand} ${product.name} kişi ətirləri arasında özünəməxsus yeri olan, ${product.concentration} konsentrasiyasına sahib unikal bir parfümdür.` 
-                    : product.gender === 'qadın' 
-                    ? `${product.brand} ${product.name} qadın ətirləri arasında seçilən, ${product.concentration} konsentrasiyasına sahib zərif bir parfümdür.`
-                    : `${product.brand} ${product.name} uniseks ətirlər arasında öz yerini tutmuş, ${product.concentration} konsentrasiyasına sahib universal bir parfümdür.`}
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-accent/30 rounded-lg p-3">
-                    <h4 className="text-sm text-gray-500 mb-1">Cins</h4>
-                    <p className="font-medium">
-                      {product.gender === 'kişi' ? 'Kişi' : product.gender === 'qadın' ? 'Qadın' : 'Uniseks'}
-                    </p>
-                  </div>
-                  <div className="bg-accent/30 rounded-lg p-3">
-                    <h4 className="text-sm text-gray-500 mb-1">Reytinq</h4>
-                    <p className="font-medium flex items-center">
-                      {product.rating} <Star className="h-3 w-3 text-yellow-400 fill-yellow-400 ml-1" />
-                    </p>
-                  </div>
-                </div>
+              
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">Orta notlar:</h4>
+                <p className="text-sm text-gray-600">{notes.middle.join(', ')}</p>
               </div>
-            </div>
-            
-            <div className="bg-white p-5 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
-              <h3 className="text-lg font-medium text-primary mb-3 flex items-center">
-                <Heart className="h-5 w-5 mr-2 text-primary/70" />
-                Əsas Üstünlüklər
-              </h3>
-              <div className="flex-1">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Bu parfüm öz kateqoriyasında {product.popularity}% məşhurluq dərəcəsinə malikdir. {product.brand} markalı bu ətir uzunömürlü və cəlbedici aromata sahibdir.
-                </p>
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="bg-accent/30 rounded-lg p-3">
-                    <h4 className="text-sm text-gray-500 mb-1">Populyarlıq</h4>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-primary h-2.5 rounded-full" style={{ width: `${product.popularity}%` }}></div>
-                    </div>
-                    <p className="text-xs text-right mt-1 text-gray-500">{product.popularity}%</p>
-                  </div>
-                </div>
+              
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">Baza notları:</h4>
+                <p className="text-sm text-gray-600">{notes.base.join(', ')}</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-      
-      {/* Ətir notları */}
-      <motion.section 
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="my-12 bg-gradient-to-r from-gray-50 to-accent/10 p-8 rounded-xl shadow-sm"
-      >
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3">
-            <Star className="h-4 w-4 text-primary" />
-          </span>
-          Ətir Notları
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-5 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-2 h-full bg-yellow-400"></div>
-            <div className="pl-3">
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Üst Notlar</h3>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {notes.top.map((note: string, index: number) => (
-                  <span 
-                    key={`top-${index}`} 
-                    className="bg-yellow-100 text-yellow-800 px-3 py-1.5 rounded-full text-sm font-medium"
-                  >
-                    {note}
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                Ətirin ilk təəssüratını yaradan, dərhal hiss edilən, lakin tez uçan notlar. İlk spreyləndikdən sonra 15-30 dəqiqə ərzində hiss olunan bu notlar ətirin başlanğıc təəssüratını formalaşdırır.
-              </p>
             </div>
           </div>
           
-          <div className="bg-white p-5 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-2 h-full bg-primary"></div>
-            <div className="pl-3">
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Orta Notlar</h3>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {notes.middle.map((note: string, index: number) => (
-                  <span 
-                    key={`mid-${index}`} 
-                    className="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-medium"
-                  >
-                    {note}
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                Ətirin "ürəyi" sayılan, üst notlar uçduqdan sonra ortaya çıxan əsas notlar. Təxminən 30 dəqiqə ilə 3-4 saat arasında hiss olunan bu notlar ətirin əsas xarakterini formalaşdırır.
+          <div>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">İstifadə tövsiyələri</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="text-sm text-gray-600 mb-4">
+                Parfümünüzü ən yaxşı şəkildə istifadə etmək üçün:
               </p>
+              <ul className="text-sm text-gray-600 list-disc list-inside space-y-2">
+                <li>Nəbz nöqtələrinə tətbiq edin (biləklər, boyun, qulaq arxası)</li>
+                <li>Dəri təmiz və nəmli olduqda tətbiq edin</li>
+                <li>Dəriyə 15-20 sm məsafədən püskürtün</li>
+                <li>Tətbiqdən sonra ovuşdurmayın</li>
+                <li>Davamlılığı artırmaq üçün uyğun bir bədən losyonu ilə birlikdə istifadə edin</li>
+              </ul>
             </div>
           </div>
           
-          <div className="bg-white p-5 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-2 h-full bg-gray-700"></div>
-            <div className="pl-3">
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Baza Notlar</h3>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {notes.base.map((note: string, index: number) => (
-                  <span 
-                    key={`base-${index}`} 
-                    className="bg-gray-200 text-gray-800 px-3 py-1.5 rounded-full text-sm font-medium"
-                  >
-                    {note}
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                Ətirin təməlini təşkil edən, ən uzun qalan dərin notlar. 4 saatdan 24 saata qədər davam edən bu notlar, ətirin yaddaqalan son akkordlarını müəyyən edir və dərinizdə ən uzun müddət qalan qoxudur.
+          <div>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">Saxlama şərtləri</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="text-sm text-gray-600 mb-4">
+                Parfümünüzün keyfiyyətini və təravətini qorumaq üçün:
               </p>
+              <ul className="text-sm text-gray-600 list-disc list-inside space-y-2">
+                <li>Sərin, quru yerdə saxlayın</li>
+                <li>Birbaşa günəş işığından qoruyun</li>
+                <li>Yüksək temperaturdan uzaq tutun</li>
+                <li>Məhsulu orijinal qutusunda saxlayın</li>
+                <li>Şüşə flakonu düşməyin və silkələməyin</li>
+              </ul>
             </div>
           </div>
         </div>
-      </motion.section>
-      
-      {/* İstifadə məsləhətləri */}
-      <motion.section 
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.7 }}
-        className="my-12 bg-white p-8 rounded-xl shadow-sm border border-accent/30"
-      >
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">İstifadə Məsləhətləri</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex gap-4">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-              <Clock className="w-6 h-6 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">İstifadə Zamanı</h3>
-              <p className="text-gray-700">
-                {product.gender === 'kişi' 
-                  ? 'Axşam saatlarında istifadə üçün ideal seçimdir, xüsusilə rəsmi görüşlər və xüsusi gecələr üçün.' 
-                  : product.gender === 'qadın' 
-                  ? 'Həm gündüz həm də axşam istifadə üçün uyğundur, xüsusi gün və tədbirlər üçün ideal seçimdir.'
-                  : 'Hər zaman istifadə edilə bilən universal bir ətrdir, gündəlik və xüsusi günlər üçün uyğundur.'}
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex gap-4">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-              <Gift className="w-6 h-6 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Mövsüm</h3>
-              <p className="text-gray-700">
-                {[...notes.top, ...notes.middle, ...notes.base].some(note => 
-                  ['Sitrus', 'Lavanda', 'Bergamot', 'Limon'].includes(note)
-                ) 
-                  ? 'Yaz və yay aylarında istifadə üçün ideal seçimdir, təravətli notları ilə ferahlıq bəxş edir.' 
-                  : 'Payız və qış aylarında istifadə üçün uyğundur, isti və dərin notları ilə soyuq havalarda rahatlıq verir.'}
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      </div>
       
       {/* Oxşar məhsullar */}
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="my-16"
-      >
-        <h2 className="parfumbar-heading text-2xl mb-8">Bənzər məhsullar</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Oxşar məhsullar</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {similarProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-      </motion.div>
+      </div>
       
       {/* Bunları da bəyənə bilərsiniz */}
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.9 }}
-        className="my-16 bg-gradient-to-r from-accent/20 to-gray-50 p-8 rounded-xl"
-      >
-        <h2 className="parfumbar-heading text-2xl mb-2 flex items-center">
-          <Sparkles className="mr-2 h-6 w-6 text-primary" />
-          Bunları da bəyənə bilərsiniz
-        </h2>
-        <p className="text-gray-600 mb-8">
-          {product.fragranceFamily === 'woody' ? 'Ağac notaları olan digər parfümlər sizə də maraqlı ola bilər' : 
-            product.fragranceFamily === 'floral' ? 'Çiçək notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            product.fragranceFamily === 'oriental' ? 'Şərq notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            product.fragranceFamily === 'fresh' ? 'Təravətli notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            product.fragranceFamily === 'fruity' ? 'Meyvə notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            product.fragranceFamily === 'gourmand' ? 'Şirin notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            product.fragranceFamily === 'aqua' ? 'Dəniz notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            product.fragranceFamily === 'citrus' ? 'Sitrus notaları olan digər parfümlər sizə də maraqlı ola bilər' :
-            'Sizin zövqünüzə uyğun ola biləcək digər parfümlər'}
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Bunları da bəyənə bilərsiniz</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {recommendedProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
