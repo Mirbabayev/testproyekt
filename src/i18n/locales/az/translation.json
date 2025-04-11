@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Ana səhifə",
+    "products": "Məhsullar",
+    "wishlist": "Seçilmişlər",
+    "cart": "Səbət",
+    "login": "Daxil ol",
+    "register": "Qeydiyyat",
+    "profile": "Profil",
+    "language": "Dil"
+  },
+  "product": {
+    "addToCart": "Səbətə əlavə et",
+    "addToWishlist": "Seçilmişlərə əlavə et",
+    "inWishlist": "Seçilmişlərdədir",
+    "inStock": "Stokda var",
+    "outOfStock": "Stokda yoxdur",
+    "details": "Məhsul haqqında",
+    "price": "Qiymət",
+    "quantity": "Miqdar",
+    "description": "Təsvir",
+    "rating": "Reytinq",
+    "features": "Xüsusiyyətlər",
+    "notes": "Ətir Notları",
+    "similar": "Bənzər məhsullar",
+    "recommendations": "Bunları da bəyənə bilərsiniz",
+    "gender": {
+      "male": "Kişi",
+      "female": "Qadın",
+      "unisex": "Uniseks"
+    }
+  },
+  "cart": {
+    "title": "Səbət",
+    "emptyCart": "Səbətiniz boşdur",
+    "continueShopping": "Alış-verişə davam et",
+    "products": "Məhsullar",
+    "delivery": "Çatdırılma",
+    "free": "Pulsuz",
+    "total": "Ümumi",
+    "checkout": "Sifarişi rəsmiləşdir"
+  },
+  "auth": {
+    "login": "Daxil ol",
+    "register": "Qeydiyyat",
+    "email": "E-poçt",
+    "password": "Şifrə",
+    "confirmPassword": "Şifrəni təsdiqlə",
+    "name": "Ad",
+    "forgotPassword": "Şifrəni unutmusan?",
+    "noAccount": "Hesabınız yoxdur?",
+    "hasAccount": "Hesabınız var?",
+    "signUp": "Qeydiyyatdan keç",
+    "signIn": "Daxil ol"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Redaktə et",
+    "save": "Yadda saxla",
+    "cancel": "Ləğv et",
+    "accountInfo": "Hesab məlumatları",
+    "fullName": "Ad Soyad",
+    "email": "E-poçt",
+    "phone": "Telefon",
+    "address": "Ünvan",
+    "settings": "Hesab parametrləri",
+    "logout": "Hesabdan çıx",
+    "deleteAccount": "Hesabı sil",
+    "deleteConfirm": "Hesabınızı silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz."
+  }
+} 

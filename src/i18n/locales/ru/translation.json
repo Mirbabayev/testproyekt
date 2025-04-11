@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Главная",
+    "products": "Товары",
+    "wishlist": "Избранное",
+    "cart": "Корзина",
+    "login": "Вход",
+    "register": "Регистрация",
+    "profile": "Профиль",
+    "language": "Язык"
+  },
+  "product": {
+    "addToCart": "В корзину",
+    "addToWishlist": "В избранное",
+    "inWishlist": "В избранном",
+    "inStock": "В наличии",
+    "outOfStock": "Нет в наличии",
+    "details": "О товаре",
+    "price": "Цена",
+    "quantity": "Количество",
+    "description": "Описание",
+    "rating": "Рейтинг",
+    "features": "Характеристики",
+    "notes": "Ноты аромата",
+    "similar": "Похожие товары",
+    "recommendations": "Вам также может понравиться",
+    "gender": {
+      "male": "Мужской",
+      "female": "Женский",
+      "unisex": "Унисекс"
+    }
+  },
+  "cart": {
+    "title": "Корзина",
+    "emptyCart": "Ваша корзина пуста",
+    "continueShopping": "Продолжить покупки",
+    "products": "Товары",
+    "delivery": "Доставка",
+    "free": "Бесплатно",
+    "total": "Итого",
+    "checkout": "Оформить заказ"
+  },
+  "auth": {
+    "login": "Вход",
+    "register": "Регистрация",
+    "email": "Эл. почта",
+    "password": "Пароль",
+    "confirmPassword": "Подтвердите пароль",
+    "name": "Имя",
+    "forgotPassword": "Забыли пароль?",
+    "noAccount": "Нет аккаунта?",
+    "hasAccount": "Уже есть аккаунт?",
+    "signUp": "Зарегистрироваться",
+    "signIn": "Войти"
+  },
+  "profile": {
+    "title": "Профиль",
+    "edit": "Редактировать",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "accountInfo": "Информация об аккаунте",
+    "fullName": "Полное имя",
+    "email": "Эл. почта",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "settings": "Настройки аккаунта",
+    "logout": "Выйти",
+    "deleteAccount": "Удалить аккаунт",
+    "deleteConfirm": "Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя отменить."
+  }
+} 

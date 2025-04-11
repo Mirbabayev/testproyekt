@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Home",
+    "products": "Products",
+    "wishlist": "Wishlist",
+    "cart": "Cart",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "language": "Language"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "addToWishlist": "Add to Wishlist",
+    "inWishlist": "In Wishlist",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "details": "Product Details",
+    "price": "Price",
+    "quantity": "Quantity",
+    "description": "Description",
+    "rating": "Rating",
+    "features": "Features",
+    "notes": "Fragrance Notes",
+    "similar": "Similar Products",
+    "recommendations": "You May Also Like",
+    "gender": {
+      "male": "Men",
+      "female": "Women",
+      "unisex": "Unisex"
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "emptyCart": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "products": "Products",
+    "delivery": "Delivery",
+    "free": "Free",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Name",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signUp": "Sign Up",
+    "signIn": "Sign In"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "accountInfo": "Account Information",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "settings": "Account Settings",
+    "logout": "Log Out",
+    "deleteAccount": "Delete Account",
+    "deleteConfirm": "Are you sure you want to delete your account? This action cannot be undone."
+  }
+} 

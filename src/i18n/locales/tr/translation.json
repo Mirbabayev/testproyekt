@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "wishlist": "Favoriler",
+    "cart": "Sepet",
+    "login": "Giriş",
+    "register": "Kayıt Ol",
+    "profile": "Profil",
+    "language": "Dil"
+  },
+  "product": {
+    "addToCart": "Sepete Ekle",
+    "addToWishlist": "Favorilere Ekle",
+    "inWishlist": "Favorilerde",
+    "inStock": "Stokta",
+    "outOfStock": "Tükendi",
+    "details": "Ürün Detayları",
+    "price": "Fiyat",
+    "quantity": "Miktar",
+    "description": "Açıklama",
+    "rating": "Değerlendirme",
+    "features": "Özellikler",
+    "notes": "Parfüm Notaları",
+    "similar": "Benzer Ürünler",
+    "recommendations": "Bunları da Beğenebilirsiniz",
+    "gender": {
+      "male": "Erkek",
+      "female": "Kadın",
+      "unisex": "Unisex"
+    }
+  },
+  "cart": {
+    "title": "Sepet",
+    "emptyCart": "Sepetiniz boş",
+    "continueShopping": "Alışverişe Devam Et",
+    "products": "Ürünler",
+    "delivery": "Teslimat",
+    "free": "Ücretsiz",
+    "total": "Toplam",
+    "checkout": "Siparişi Tamamla"
+  },
+  "auth": {
+    "login": "Giriş",
+    "register": "Kayıt Ol",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifre Tekrar",
+    "name": "İsim",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "noAccount": "Hesabınız yok mu?",
+    "hasAccount": "Zaten hesabınız var mı?",
+    "signUp": "Kayıt Ol",
+    "signIn": "Giriş Yap"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Düzenle",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "accountInfo": "Hesap Bilgileri",
+    "fullName": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres",
+    "settings": "Hesap Ayarları",
+    "logout": "Çıkış Yap",
+    "deleteAccount": "Hesabı Sil",
+    "deleteConfirm": "Hesabınızı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+  }
+} 
